@@ -7,7 +7,7 @@ A web application built to help you manage how you spend time online.
 - Times activity spent on various tasks
 - Options to start, stop, delete, and save events
 
-###How to Run:
+### How to Run:
 1. Install Python 2.X or 3.X
 2. Clone directory onto your machine
 3. In your working directory, run the following:
