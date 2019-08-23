@@ -1,0 +1,50 @@
+<head>
+  <title>Manage Your Time</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+
+<body onload="runTime()">
+    <h1>The time is...</h1>
+
+    <h1 id="curTime"></h1>
+
+    <br>
+    <h2>I am currently...</h2>
+
+
+
+    <div class="grid-container">
+        <a href="track.html" class="button" id="work"
+        onclick="sessionStorage.setItem('activity', 'Working');">Working</a>
+        <a href="track.html" class="button" id="stud"
+        onclick="sessionStorage.setItem('activity', 'Studying');">Studying</a>
+        <a href="track.html" class="button" id="chat"
+        onclick="sessionStorage.setItem('activity', 'Chatting');">Chatting</a>
+        <a href="track.html" class="button" id="net"
+        onclick="sessionStorage.setItem('activity', 'Netflix');">Netflix</a>
+        <a href="track.html" class="button" id="tube"
+        onclick="sessionStorage.setItem('activity', 'Youtube');">Youtube</a>
+        <a href="track.html" class="button" id="game"
+        onclick="sessionStorage.setItem('activity', 'Gaming');">Gaming</a>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="grid-containersolo">
+        <button id="authorize_button" style="display: none;">Log In</button>
+        <button id="signout_button" style="display: none;">Sign Out</button>
+    </div>
+
+    <pre id="content" style="white-space: pre-wrap;"></pre>
+
+    <script src="config.js"></script>
+    <script src="clock.js"></script>
+    <script src="authorize.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+
+</body>

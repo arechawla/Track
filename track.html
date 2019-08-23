@@ -1,0 +1,38 @@
+<head>
+  <title>Track The Time</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="document.getElementById('ac').innerHTML = sessionStorage.getItem('activity');">
+  <h1 id="stopWatch">00:00:00</h1>
+
+  <h1 id="ac"></h1>
+
+  <div class="grid-container2">
+    <button onclick="stopWatch()">Start</button>
+    <button onclick="stop()">Stop</button>
+    <button onclick="reset()">Delete</button>
+    <button onclick="initClient()" id="saveButton">Save</button>
+  </div>
+
+  <br>
+  <div class="grid-containersolo">
+      <button id="authorize_button" style="display: none;">Log In</button>
+      <button id="signout_button" style="display: none;">Sign Out</button>
+  </div>
+  <pre id="content" style="white-space: pre-wrap;"></pre>
+
+
+  <script src="stopWatch.js">
+  </script>
+  <script src="config.js"></script>
+  <script src="authorize.js"></script>
+
+  <script async defer src="https://apis.google.com/js/api.js"
+    onload="this.onload=function(){};handleClientLoad()"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
+
+  <script src="addEvent.js">
+  </script>
+</body>
